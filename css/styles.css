@@ -116,12 +116,36 @@ button {
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
-
+.burger-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+@media only screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+}
+.burger-icon {
+  display: block;
+  fill: #2f2f37;
+}
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
 .header-nav {
   display: flex;
   align-items: center;
@@ -132,20 +156,32 @@ button {
   align-items: center;
   gap: 40px;
 }
+@media only screen and (max-width: 767.98px) {
+  .nav-list {
+    display: none;
+  }
+}
 
 .contacts-list {
   display: flex;
   align-items: center;
   gap: 40px;
 }
+
+}
 .header-logo .logo-part {
   color: #2e2f42;
 }
 .header-logo {
-  padding: 24px 0;
-  margin: 0 76px 0 0;
+  display: block;
+  padding: 16px 0;
 }
-
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
+}
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -163,6 +199,7 @@ button {
   display: inline-block;
   margin-bottom: 16px;
 }
+
 .nav-link {
   display: block;
   padding: 24px 0;
@@ -199,6 +236,11 @@ button {
   font-style: normal;
   margin-left: auto;
 }
+@media only screen and (max-width: 767.98px) {
+  .contacts {
+    display: none;
+  }
+}
 
 .contacts-link {
   display: block;
@@ -228,17 +270,6 @@ button {
   max-width: 1440px;
   background-size: cover;
 }
-.icon-main-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 264px;
-  height: 112px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  background-color: #f4f4fd;
-  margin-bottom: 8px;
-}
 /* #endregion */
 
 /* #region Hero */
@@ -246,6 +277,12 @@ button {
   padding: 188px 0;
   background-color: #2e2f42;
 }
+@media only screen and (min-width: 320px) {
+  .page-hero {
+    min-width: 320px;
+  }
+}
+
 .page-hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -255,6 +292,16 @@ button {
   color: #fff;
   margin: 0 auto 48px;
   max-width: 496px;
+}
+@media only screen and (min-width: 320px) {
+  .page-hero-title {
+    margin-bottom: 72px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .page-hero-title {
+    margin-bottom: 36px;
+  }
 }
 .page-hero-button {
   display: block;
@@ -282,16 +329,56 @@ button {
 
 /* #region Benefits*/
 .main-page {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
+@media screen and (min-width: 1158px) {
+  .page-team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
 .main-page-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+  column-gap: 24px;
+  row-gap: 72px;
 }
-.flex-item-maine-page {
-  width: calc((100% - 72px) / 4);
+@media only screen and (min-width: 768px) {
+  .main-page-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
+@media only screen and (min-width: 1158px) {
+  .main-page-list {
+    flex-wrap: nowrap;
+  }
+}
+.icon-main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background-color: #f4f4fd;
+  margin-bottom: 8px;
+}
+@media only screen and (max-width: 1157.98px) {
+  .icon-main-page {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .flex-item-maine-page {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
 .main-title-hero {
   font-weight: 500;
   font-size: 20px;
@@ -301,7 +388,20 @@ button {
   background-color: #fff;
   margin-bottom: 8px;
 }
+@media only screen and (min-width: 320px) {
+  .main-title-hero {
+    display: flex;
 
+    align-items: left;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-title-hero {
+    justify-content: left;
+  }
+}
 .main-text-hero {
   font-weight: 400;
   font-size: 16px;
@@ -448,14 +548,37 @@ button {
 /* #endregion */
 
 /* #region Footer */
+
 .page-footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
-.footer-container {
-  display: flex;
-  align-items: baseline;
+@media (min-width: 1158px) {
+  .page-footer {
+    padding: 100px 0;
+  }
 }
+
+@media (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-container {
+    max-width: 584px;
+    gap: 72px 24px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .footer-container {
+    flex-wrap: nowrap;
+  }
+}
+
 .text-footer {
   font-weight: 400;
   font-size: 16px;
@@ -463,7 +586,16 @@ button {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
+  text-align: left;
 }
+
+@media (max-width: 767px) {
+  .footer-left {
+    margin-bottom: 72px;
+    text-align: center;
+  }
+}
+
 .footer-subtitle {
   font-weight: 500;
   font-size: 16px;
@@ -472,11 +604,22 @@ button {
   color: #fff;
   margin-bottom: 16px;
 }
-.footer-middle {
+
+@media (max-width: 767px) {
+  .footer-subtitle {
+    text-align: center;
+  }
+  .footer-middle {
+    margin-bottom: 72px;
+  }
 }
-.footer-left {
-  margin-right: 120px;
+
+@media (min-width: 1158px) {
+  .footer-left {
+    margin-right: 120px;
+  }
 }
+
 .footer-socials {
   gap: 16px;
 }
@@ -486,12 +629,22 @@ button {
 .footer-socials .socials-link:focus {
   background-color: #31d0aa;
 }
-.footer-right {
-  margin-left: 80px;
+@media (min-width: 1158px) {
+  .footer-right {
+    margin-left: 80px;
+  }
 }
-.modal-form-footer {
-  display: flex;
-  gap: 24px;
+
+@media (min-width: 768px) {
+  .modal-form-footer {
+    display: flex;
+    gap: 24px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .modal-form-footer {
+    margin: 16px;
+  }
 }
 .footer-subscribe {
   font-weight: 500;
@@ -500,6 +653,21 @@ button {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .footer-subscribe {
+    text-align: center;
+  }
+}
+
+.modal-form-email {
+  width: 288px;
+}
+@media (min-width: 768px) {
+  .modal-form-email {
+    width: 264px;
+  }
 }
 .footer-btn {
   display: flex;
@@ -526,6 +694,13 @@ button {
 .footer-btn-icon {
   margin-left: 16px;
 }
+
+@media (max-width: 767px) {
+  .footer-btn {
+    margin: 16px auto 0 auto;
+  }
+}
+
 /* #endregion */
 
 /* #region Modal window */
@@ -706,6 +881,7 @@ button {
   align-items: center;
   justify-content: center;
   width: 16px;
+  margin-right: 8px;
   height: 16px;
   fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
