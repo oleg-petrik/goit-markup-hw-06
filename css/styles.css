@@ -293,12 +293,68 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/Dark-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  margin: auto;
-  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 767px;
   background-size: cover;
+}
+@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .background {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-mobile@2x.jpg);
+
+    max-width: 767px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .background {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-tablet.jpg);
+
+    max-width: 1157px;
+  }
+}
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .background {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-tablet@2x.jpg);
+
+    max-width: 1157px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .background {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-desctop.jpg);
+
+    max-width: 1440px;
+  }
+}
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .background {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-desctop@2x.jpg);
+
+    max-width: 1440px;
+  }
 }
 /* Mobile menu */
 
